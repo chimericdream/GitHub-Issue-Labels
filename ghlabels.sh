@@ -60,76 +60,237 @@ function init() {
 
     appTypeMenu;
     buildDeps;
+    run;
 }
 
 function run() {
+    echo -e "\033[0;36m";
+
     ## Delete default labels
     case $rmdefaults_yn in
         [Yy]* )
-            #deleteLabel "bug"
-            #deleteLabel "duplicate"
-            #deleteLabel "enhancement"
-            #deleteLabel "invalid"
-            #deleteLabel "question"
-            #deleteLabel "wontfix"
+            echo -n "Deleting \"bug\"..................";
+            deleteLabel "bug"
+            echo -e "\033[1;32mcomplete\033[0;36m";
+            echo -n "Deleting \"duplicate\"............";
+            deleteLabel "duplicate"
+            echo -e "\033[1;32mcomplete\033[0;36m";
+            echo -n "Deleting \"enhancement\"..........";
+            deleteLabel "enhancement"
+            echo -e "\033[1;32mcomplete\033[0;36m";
+            echo -n "Deleting \"invalid\"..............";
+            deleteLabel "invalid"
+            echo -e "\033[1;32mcomplete\033[0;36m";
+            echo -n "Deleting \"question\".............";
+            deleteLabel "question"
+            echo -e "\033[1;32mcomplete\033[0;36m";
+            echo -n "Deleting \"wontfix\"..............";
+            deleteLabel "wontfix"
+            echo -e "\033[1;32mcomplete\033[0;36m";
         ;;
     esac
 
+    echo -e "";
+
     ## Create labels
-    #addLabel "P1: Blocker" "FF0000"
-    #addLabel "P2: Critical" "FF8000"
-    #addLabel "P3: Major" "FFFF00"
-    #addLabel "P4: Minor" "40C040"
-    #addLabel "P5: Trivial" "0000FF"
-    #
-    #addLabel "duplicate" "CCCCCC"
-    #addLabel "invalid" "CCCCCC"
-    #addLabel "planned" "20A020"
-    #addLabel "unverified" "FFC000"
-    #addLabel "wontfix" "000000"
-    #
-    #addLabel "bug" "FF0000"
-    #addLabel "chore" "FFC000"
-    #addLabel "documentation" "C080FF"
-    #addLabel "enhancement" "80C0FF"
-    #addLabel "feature request" "C04080"
-    #addLabel "question" "8000FF"
-    #addLabel "refactor" "0080C0"
-    #
-    ### This one needs to be done manually
-    ###addLabel "¯\_(ツ)_/¯" "FFFFFF"
-    #addLabel "breaks bc" "FF8000"
-    #addLabel "code review" "0000FF"
-    #addLabel "discussion" "C080FF"
-    #addLabel "has PR" "20A020"
-    #addLabel "help wanted" "FFA040"
-    #addLabel "in progress" "0080C0"
-    #addLabel "needs tests" "FFFF00"
-    #addLabel "performance" "8000FF"
-    #addLabel "regression" "FF0000"
-    #addLabel "research" "C080FF"
-    #addLabel "waiting" "FF8000"
-    #
-    #addLabel "LOE: Epic" "000000"
-    #addLabel "LOE: High" "444444"
-    #addLabel "LOE: Medium" "888888"
-    #addLabel "LOE: Easy" "CCCCCC"
-    #addLabel "LOE: Trivial" "FFFFFF"
-    #
+    echo -n "Adding \"P1: Blocker\"................";
+    addLabel "P1: Blocker" "FF0000"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"P2: Critical\"...............";
+    addLabel "P2: Critical" "FF8000"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"P3: Major\"..................";
+    addLabel "P3: Major" "FFFF00"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"P4: Minor\"..................";
+    addLabel "P4: Minor" "40C040"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"P5: Trivial\"................";
+    addLabel "P5: Trivial" "0000FF"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+
+    echo -n "Adding \"duplicate\"..................";
+    addLabel "duplicate" "CCCCCC"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"invalid\"....................";
+    addLabel "invalid" "CCCCCC"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"planned\"....................";
+    addLabel "planned" "20A020"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"unverified\".................";
+    addLabel "unverified" "FFC000"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"wontfix\"....................";
+    addLabel "wontfix" "000000"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+
+    echo -n "Adding \"bug\"........................";
+    addLabel "bug" "FF0000"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"chore\"......................";
+    addLabel "chore" "FFC000"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"documentation\"..............";
+    addLabel "documentation" "C080FF"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"enhancement\"................";
+    addLabel "enhancement" "80C0FF"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"feature request\"............";
+    addLabel "feature request" "C04080"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"question\"...................";
+    addLabel "question" "8000FF"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"refactor\"...................";
+    addLabel "refactor" "0080C0"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+
+    ## This one needs to be done manually
+    ##echo -n "Adding \"¯\_(ツ)_/¯\"..................";
+    ##addLabel "¯\_(ツ)_/¯" "FFFFFF"
+    ##echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"breaks bc\"..................";
+    addLabel "breaks bc" "FF8000"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"code review\"................";
+    addLabel "code review" "0000FF"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"discussion\".................";
+    addLabel "discussion" "C080FF"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"has PR\".....................";
+    addLabel "has PR" "20A020"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"help wanted\"................";
+    addLabel "help wanted" "FFA040"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"in progress\"................";
+    addLabel "in progress" "0080C0"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"needs tests\"................";
+    addLabel "needs tests" "FFFF00"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"performance\"................";
+    addLabel "performance" "8000FF"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"regression\".................";
+    addLabel "regression" "FF0000"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"research\"...................";
+    addLabel "research" "C080FF"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"waiting\"....................";
+    addLabel "waiting" "FF8000"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+
+    echo -n "Adding \"LOE: Epic\"..................";
+    addLabel "LOE: Epic" "000000"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"LOE: High\"..................";
+    addLabel "LOE: High" "444444"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"LOE: Medium\"................";
+    addLabel "LOE: Medium" "888888"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"LOE: Easy\"..................";
+    addLabel "LOE: Easy" "CCCCCC"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -n "Adding \"LOE: Trivial\"...............";
+    addLabel "LOE: Trivial" "FFFFFF"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
+
+    #echo -n "Adding \"angular\"....................";
     #addLabel "angular" "C04080"
+    #echo -e "\033[1;32mcomplete\033[0;36m";
+
+    #echo -n "Adding \"css\"........................";
     #addLabel "css" "2080CC"
-    #addLabel "grunt" "FFFF00"
+    #echo -e "\033[1;32mcomplete\033[0;36m";
+
+    #if [ "$grunt_yn" == "y" || "$grunt_yn" == "Y" ]; then
+    #    echo -n "Adding \"grunt\"......................";
+    #    addLabel "grunt" "FFFF00"
+    #    echo -e "\033[1;32mcomplete\033[0;36m";
+    #fi
+
+    #echo -n "Adding \"html\".......................";
     #addLabel "html" "C080FF"
+    #echo -e "\033[1;32mcomplete\033[0;36m";
+
+    #echo -n "Adding \"images\".....................";
     #addLabel "images" "8000FF"
+    #echo -e "\033[1;32mcomplete\033[0;36m";
+
+    #echo -n "Adding \"jquery\".....................";
     #addLabel "jquery" "80C0FF"
+    #echo -e "\033[1;32mcomplete\033[0;36m";
+
+    #echo -n "Adding \"tests\"......................";
     #addLabel "tests" "FF8000"
+    #echo -e "\033[1;32mcomplete\033[0;36m";
+
+    #echo -n "Adding \"third party\"................";
     #addLabel "third party" "CCCCCC"
-    #
+    #echo -e "\033[1;32mcomplete\033[0;36m";
+
+
+    #echo -n "Adding \"chrome\".....................";
     #addLabel "chrome" "2080CC"
+    #echo -e "\033[1;32mcomplete\033[0;36m";
+
+    #echo -n "Adding \"firefox\"....................";
     #addLabel "firefox" "FF8000"
+    #echo -e "\033[1;32mcomplete\033[0;36m";
+
+    #echo -n "Adding \"ie\".........................";
     #addLabel "ie" "80C0FF"
+    #echo -e "\033[1;32mcomplete\033[0;36m";
+
+    #echo -n "Adding \"opera\"......................";
     #addLabel "opera" "FFFF00"
+    #echo -e "\033[1;32mcomplete\033[0;36m";
+
+    #echo -n "Adding \"safari\".....................";
     #addLabel "safari" "8000FF"
+    #echo -e "\033[1;32mcomplete\033[0;36m";
+
+    echo -e "\n\nComplete";
 }
 
 function addLabel() {
@@ -174,7 +335,7 @@ function appTypeMenu() {
 }
 
 function languageMenu() {
-    echo -e "\033[00;37;40mWhat is the primary language for your application?";
+    echo -e "\n\033[00;37;40mWhat is the primary language for your application?";
     echo -e "  1) PHP             4) Python";
     echo -e "  2) .NET            5) Perl";
     echo -e "  3) Java            6) Bash/Shell";
