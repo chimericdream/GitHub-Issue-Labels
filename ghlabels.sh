@@ -209,6 +209,10 @@ function run() {
     addLabel "research" "C080FF"
     echo -e "\033[1;32mcomplete\033[0;36m";
 
+    echo -n "Adding \"tech debt\"..................";
+    addLabel "tech debt" "FFFF00"
+    echo -e "\033[1;32mcomplete\033[0;36m";
+
     echo -n "Adding \"waiting\"....................";
     addLabel "waiting" "FF8000"
     echo -e "\033[1;32mcomplete\033[0;36m";
@@ -235,12 +239,28 @@ function run() {
     echo -e "\033[1;32mcomplete\033[0;36m";
 
 
+    #echo -n "Adding \"liquid\"...................";
+    #addLabel "liquid" "C080FF"
+    #echo -e "\033[1;32mcomplete\033[0;36m";
+
+    #echo -n "Adding \"markdown\"....................";
+    #addLabel "markdown" "20A020"
+    #echo -e "\033[1;32mcomplete\033[0;36m";
+
+    #echo -n "Adding \"jekyll\".....................";
+    #addLabel "jekyll" "C080FF"
+    #echo -e "\033[1;32mcomplete\033[0;36m";
+
     #echo -n "Adding \"angular\"....................";
     #addLabel "angular" "C04080"
     #echo -e "\033[1;32mcomplete\033[0;36m";
 
     #echo -n "Adding \"css\"........................";
     #addLabel "css" "2080CC"
+    #echo -e "\033[1;32mcomplete\033[0;36m";
+
+    #echo -n "Adding \"js\".................";
+    #addLabel "js" "FF8000"
     #echo -e "\033[1;32mcomplete\033[0;36m";
 
     #if [ "$grunt_yn" == "y" || "$grunt_yn" == "Y" ]; then
