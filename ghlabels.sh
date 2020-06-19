@@ -72,18 +72,31 @@ function run() {
             echo -n "Deleting \"bug\"..................";
             deleteLabel "bug"
             echo -e "\033[1;32mcomplete\033[0;36m";
+
             echo -n "Deleting \"duplicate\"............";
             deleteLabel "duplicate"
             echo -e "\033[1;32mcomplete\033[0;36m";
+
             echo -n "Deleting \"enhancement\"..........";
             deleteLabel "enhancement"
             echo -e "\033[1;32mcomplete\033[0;36m";
+
+            echo -n "Deleting \"good first issue\".....";
+            deleteLabel "good first issue"
+            echo -e "\033[1;32mcomplete\033[0;36m";
+
+            echo -n "Deleting \"help wanted\"..........";
+            deleteLabel "help wanted"
+            echo -e "\033[1;32mcomplete\033[0;36m";
+
             echo -n "Deleting \"invalid\"..............";
             deleteLabel "invalid"
             echo -e "\033[1;32mcomplete\033[0;36m";
+
             echo -n "Deleting \"question\".............";
             deleteLabel "question"
             echo -e "\033[1;32mcomplete\033[0;36m";
+
             echo -n "Deleting \"wontfix\"..............";
             deleteLabel "wontfix"
             echo -e "\033[1;32mcomplete\033[0;36m";
